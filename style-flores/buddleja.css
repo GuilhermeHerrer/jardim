@@ -1,0 +1,145 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --cor-principal: 106, 13, 173; 
+    --cor-secundaria: 48, 0, 79;
+    --cor-detalhe: #B19CD9;
+    --branco: 255,255,255;
+    --preto: 0,0,0;
+    --fonte-principal: "Lora", serif;
+}
+
+@font-face {
+    font-family: "Title";
+    src: url(../fonte/FlowerFont-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #E6E6FA;
+    background: linear-gradient(90deg, #f3e5f5 0%, #d1c4e9 50%, #f3e5f5 100%);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 85%;    
+    max-width: 600px;
+    margin: 4vh auto 2vh auto;
+    padding: 1.2rem;
+    background-color: rgba(var(--cor-principal), 0.1);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 15px rgba(var(--cor-secundaria), 0.3);
+    border-radius: 6px;
+    font-family: var(--fonte-principal);    
+}
+
+#main-title {
+    font-family: "Title";
+    font-size: 3rem;
+    display: block;
+    margin: 1vh 0 1vh 0;
+    background: linear-gradient(
+        to bottom, 
+        #4B0082, 
+        #6A0DAD, 
+        #FFFFFF, 
+        #B19CD9, 
+        #4B0082
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(2px 2px 2px rgba(var(--preto), 0.2));
+    font-weight: 900;
+}
+
+#container-foto {
+    padding: 1rem;
+    background-color: rgba(var(--cor-principal), 0.3);
+    border-radius: 0.9rem;
+    margin: 1rem 0 1rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+#fotoPrincipal {
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+h2 {
+    color: var(--cor-secundaria); 
+    border-bottom: 4px solid var(--cor-detalhe);
+    display: inline-block;
+    padding: 0 10px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.4;
+}
+
+li::before {
+    content: "🦋";
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+.link-voltar {
+    display: flex;
+    padding: 1.2rem;
+    background-color: rgb(var(--cor-secundaria));
+    border-radius: 100px;
+    height: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.link-voltar:hover {
+    transform: scale(1.05);
+    background-color: var(--cor-principal);
+}
+
+.voltar {
+    transform: rotate(90deg);
+    margin-right: 8px;
+}
