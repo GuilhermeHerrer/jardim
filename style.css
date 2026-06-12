@@ -286,7 +286,7 @@ footer{
 @media (max-width: 768px) {
 
     #popup h1 {
-        font-size: clamp(3rem, 3vw, 1.5rem);
+        font-size: clamp(2.4rem, 3vw, 1.5rem);
     }
 
     #gif-gato {
